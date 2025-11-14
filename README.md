@@ -1,146 +1,55 @@
-# sudoku-sage
-Master sudoku intuitively in a simple game
-
-🧩 Sudoku-Sage: A Beginner's Guide to the Game and Tools
-Welcome to Advanced Sudoku! This guide will walk you through the rules, explain all the powerful tools at your disposal, and teach you the core logic you'll need to start solving puzzles like a pro.
-
-1. The Rules of the Game
-Sudoku is a logic puzzle played on a 9x9 grid. The board is divided into nine 3x3 smaller squares (called boxes).
-
-The core rule is simple: Every row, every column, and every 3x3 box must contain all digits from 1 to 9, with no repeats.
-
-The numbers already filled in (the givens) cannot be changed.
-
-Your task is to fill in the empty cells using pure logic.
-
-2. Your Sudoku Toolkit (The Four Modes)
-The most important tool is the Mode Button (located above the Undo/Erase buttons). Clicking it cycles through four input states, allowing you to manage your notes and final answers.
-
+🧠 Sudoku Sage Tutorial
+Welcome to the Advanced Sudoku Sage! This guide explains the different input modes and features to help you tackle even the toughest puzzles.
+1. Input Modes (The Mode Button)
+The core feature of this game is the ability to easily switch between different ways of entering numbers. Use the main Mode Button (below the number pad) to cycle through the four states:
 Mode
-
 Icon
-
-Function
-
-When to Use It
-
+Purpose
+Input Action
 Value Mode
-
 ✏️
-
-Enter a final, confirmed answer. Clears all notes in that cell automatically.
-
-When you are 100% certain of the digit for a cell.
-
+Enter final answers.
+Inputting a number replaces any existing notes or values.
 Corner Note Mode
-
 ✍️
-
-Enter small pencil marks in the cell's corners (candidates).
-
-To track potential numbers that could fit in a cell.
-
+Enter small, corner pencil marks.
+Ideal for candidates you want to track in a cell.
 Center Mark Mode
-
 ⭐
-
-Enter larger center marks (strong candidates).
-
-To highlight strong possibilities or use specific solving techniques.
-
+Enter bold, center candidates.
+Useful for marking pairs/triples or high-priority candidates.
 Strike Mode
-
 🚫
+Manually delete notes/candidates.
+Use this to actively eliminate a candidate from a cell's corner or center notes.
 
-Removes an entered note (both corner and center marks) from the selected cell(s).
-
-When your logic confirms a candidate is impossible for a selected cell.
-
-Tip: Select a cell, then press the number button (1-9) to apply the current mode's action.
-
-3. Game Controls for Efficiency
-These buttons are designed to help you manage your session, correct mistakes, and speed up note-taking.
-
-Button
-
-Icon
-
-Function
-
-Why it Helps
-
-Undo
-
-↩️
-
-Reverts the last move (value input, note toggle, or clear).
-
-Essential for quickly fixing an accidental click or testing a theory.
-
-Erase
-
-❌
-
-Clears the value and all notes from all currently selected cells.
-
-The fastest way to empty multiple cells simultaneously.
-
-Reset
-
-🏠
-
-Restores the entire board to its original, starting configuration.
-
-If you get hopelessly stuck and want to start fresh without losing the puzzle.
-
+2. Cell Selection and Input
+Single & Multi-Selection
+Single Select: Tap or click a cell.
+Multi-Select: Hold down the Shift, Ctrl, or Cmd key while clicking multiple cells.
+Note: On touch devices, multi-selection is not supported.
+Applying Input
+Select one or more target cells.
+Tap a number on the number pad (1-9).
+The input (Value, Corner Note, Center Mark, or Deletion) will be applied to all selected cells simultaneously, saving you time!
+Erasing Content
+Tap the ❌ Erase button to clear the value and all notes from any currently selected cell(s).
+3. Visual Aids and Game Features
+Number Highlighting
+If you don't have any cells selected:
+Tap a number (1-9): This will activate the Highlight Mode for that number.
+Cells containing that number will be highlighted.
+Cells containing that number as a corner or center note will also be highlighted.
+The corresponding button on the number pad will turn Orange.
+Crucially, valid placement cells (where that number can safely be placed) will be highlighted in light green.
+Tap the number again: This will turn off the highlight.
 Auto Notes
-
-📝
-
-Scans the board and automatically fills corner notes for all empty cells with every mathematically possible candidate.
-
-A massive time-saver. Eliminates the manual work of writing initial candidates.
-
-Smart Hint
-
-✨
-
-Uses AI to analyze the board and provide the next logical step.
-
-Use it when you are stuck and need a gentle push toward the solution.
-
-Solve
-
-🔮
-
-Instantly fills the entire board with the correct solution.
-
-For when you give up, or just want to confirm your final answer.
-
-4. Essential Solving Techniques
-You don't need complicated math; Sudoku relies entirely on visual logic and elimination. Start with these fundamental techniques:
-
-A. Scanning (Simple Sweeping)
-
-This is the easiest way to start. Scan each row, column, and 3x3 box, looking for digits 1 through 9.
-
-Select a number (e.g., the number 4 button) to highlight all of its occurrences on the board.
-
-Focus on an empty box. Look at the three rows and three columns that intersect that box.
-
-If all three "lanes" (rows/columns) of the target digit (4) are blocked from entering the box, you have made a mistake! If only one cell remains open for the 4, you've found its correct position.
-
-B. Naked Singles (The Easiest Find)
-
-This technique uses your notes (pencil marks):
-
-Use the Auto Notes (📝) button. This fills all candidates.
-
-Scan the board for a cell that has only one candidate listed (e.g., only a 6 in its corner notes).
-
-If a cell has only one possible number left, that number must be the final answer for that cell. Enter it using ✏️ Value Mode.
-
-Once you find a final answer, use the principles of elimination to remove that number as a candidate from all other cells in the same row, column, and box. Keep repeating this process until no more Singles can be found!
-
-Ready to apply these tools? Select New Game and let the logic begin! Do you want to try practicing the Naked Singles technique on your first puzzle?
-
+Tap the 📝 Auto Notes button to automatically scan the entire board and fill in the Corner Notes for every possible candidate in every empty, user-editable cell. This is a great way to start your candidate tracking!
+History and Reset
+↩️ Undo: This button keeps track of your last 30 moves. Click it to step back and reverse your last action.
+🏠 Reset: This instantly clears all your inputs and notes, restoring the board to the original puzzle start state.
+🆕 Game: Generates a completely new, unique Sudoku puzzle.
+🔮 Solve: Instantly solves the entire puzzle using the internal solution stored when the game was created.
+4. Winning
+When you successfully complete the puzzle and all cells match the hidden solution, you will see a congratulatory message!
+The number buttons (1-9) will turn Green as you correctly place all nine instances of that number.
